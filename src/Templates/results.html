@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script type="text/javascript" src="..\Scripts\search.js"></script>
+	<link rel="stylesheet" type="text/css" href="..\Styles\styles.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+	<title>Email LookUp</title>
+</head>
+
+<body>
+	<div class="parent">
+		<header class="navbar-bg-color">
+			<!-- Navigation Bar -->
+			<nav class="navbar navbar-expan-md content-wrapper sticky-top">
+				<div class="container-fluid">
+					<a href="#" class="navbar-brand">
+						<img src="../../Assets/PNGs/Logo@2x.png" alt="company logo" class="company-logo" />
+					</a>
+					<ul class="navbar-nav ml-auto flex-row">
+						<li class="nav-item me-3 me-lg-0">
+							<a class="nav-link " href="src/templates/results.html"><img src="../../Assets/SVGs/icn_search.svg" alt="search icon" /></a>
+						</li>
+						<li class="nav-item me-3 me-lg-0">
+							<a class="nav-link" href="#"><img src="../../Assets/SVGs/icn_person.svg" alt="person icon" /></a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- End Header/Navigation -->
+		<!-- 
+
+       -->
+		<!-- Main Content -->
+		<main>
+
+            <div class="results-content content-wrapper" >
+                <div class="results-count text-center">
+                    <h1 id="resultsCount" class="blue-text"> Results</h1>
+                    <p id="responseText">Look at the results</p>
+                </div>
+                <div class="results-details">
+
+                </div>
+            </div>
+
+
+
+			<!-- Main Content Search -->
+			<div class="main-search jumbotron content-wrapper" id="search-section">
+				<h1 class="text-center display-2">Can't Find The RIght Person?</h1>
+				<h3 class="text-center">
+					<b class="highlight-text">Try Again</b> - Make a new search
+				</h3>
+				<form class="align-items-center" style="margin: 10px 5px;">
+					<div class="row">
+						<div style="margin-bottom: 5px;"
+							class="col-xs-12 col-sm-9 col-md-10 col-lg-10 col-xl-10 input-group-lg">
+
+							<input type="email" class="form-control " id="search-input" placeholder="Email" />
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 col-xl-2 input-group-lg">
+							<button type="submit" class="mb-3 btn-go ">
+								GO!
+							</button>
+						</div>
+					</div>
+				</form>
+
+
+				<div class="d-flex align-items-baseline">
+					<img src="../../Assets/SVGs/lock.svg" alt="lock icon" />
+					<i contenteditable="false" class="highlight-text" style="margin-left: 5px;">
+						Enter Any Email Address. They won't be notified</i>
+				</div>
+			</div>
+			<!-- End Main Content Search -->
+		
+	</main>
+
+	<!--           FOOTER             -->
+	<footer class="purple section" contenteditable>
+		<div class="container-fluid">
+			<div style="float: left;">
+				<p class="footer-text" style="color: gray;">
+					Pellentesque habitant morbi tristique senectus et
+										netus et malesuada fames ac turpis egestas. Vestibulum
+										tortor quam, feugiat vitae, ultricies eget. Donec eu
+										libero sit amet quam egestas semper. Aenean ultricies
+										mi vitae est. Mauris placerat eleifend leo.
+		
+				</p>
+
+			</div>
+		
+			<div>
+				<p class="blue-text"> Terms and Conditions</p>
+			</div>
+		</div>
+
+	</footer>
+	</div>
+</body>
+
+</html>
