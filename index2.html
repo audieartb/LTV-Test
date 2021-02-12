@@ -16,20 +16,20 @@
   </head>
   <body>
     <div class="parent">
-      <header class="navbar-bg-color">
+      <header>
         <!-- Navigation Bar -->
-        <nav class="navbar navbar-expan-md content-wrapper sticky-top">
+        <nav class="navbar navbar-expan-md navbar-bg-color sticky-top">
           <div class="container-fluid">
             <a href="#" class="navbar-brand">
-              <img src="Assets/PNGs/Logo@2x.png" alt="company logo" class="company-logo" />
+              <img src="Assets/PNGs/Logo@2x.png" alt="" />
             </a>
-            <ul class="navbar-nav ml-auto flex-row" >
-              <li class="nav-item me-3 me-lg-0">
-                <a class="nav-link " href="#"
+            <ul navbar-nav ml-auto>
+              <li>
+                <a class="nav-link" href="#"
                   ><img src="Assets/SVGs/icn_search.svg" alt="search icon"
                 /></a>
               </li>
-              <li class="nav-item me-3 me-lg-0">
+              <li>
                 <a class="nav-link" href="#"
                   ><img src="Assets/SVGs/icn_person.svg" alt="person icon"
                 /></a>
@@ -43,38 +43,34 @@
 
        -->
       <!-- Main Content -->
-      <main >
+      <main>
         <!-- Main Content Search -->
-        <div class="main-search jumbotron content-wrapper" id="search-section">
-          <h1 class="text-center display-2">Search Any Email Address</h1>
+        <div class="main-search" id="search-section">
+          <h1 class="text-center">Search Any Email Address</h1>
           <h3 class="text-center">
-            <b class="highlight-text">Start Here</b>  - Look up the owner's name, photos and online profiles.
+            Start Here - Look up the owner's name, photos and online profiles.
             See what you find!
           </h3>
-         <form class="align-items-center" style="margin: 10px 5px;">
-          <div class="row" >
-            <div style="margin-bottom: 5px;" class="col-xs-12 col-sm-9 col-md-10 col-lg-10 col-xl-10 input-group-lg">
-             
-              <input
-                type="email"
-                class="form-control "
-                id="search-input"
-                placeholder="Email"
-              />
-            </div>
-            <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 col-xl-2 input-group-lg">
-              <button type="submit" class="mb-3 btn-go ">
-                GO!
-              </button>
-            </div>
+          <div class="text-center">
+            <form class="row g-8">
+              <div class="col-sm-7 text-center">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="search-input"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="mb-3 btn-go">GO!</button>
+              </div>
+            </form>
           </div>
-         </form>
-         
-          
-          <div class="d-flex align-items-baseline">
+
+          <div>
             <img src="Assets/SVGs/lock.svg" alt="lock icon" />
-            <i contenteditable="false" class="highlight-text" style="margin-left: 5px;">
-               Enter Any Email Address. They won't be notified</i
+            <i contenteditable="false" class="highlight-text">
+              Enter Any Email Address. They won't be notified</i
             >
           </div>
         </div>
@@ -83,9 +79,9 @@
           
          -->
         <!--  Main Content Information -->
-        <div class="main-content-lower content-wrapper">
+        <div class="main-content">
           <div>
-            <h1 class="blue-text" style="text-align: center;" >Reverse Email Lookup</h1>
+            <h1>Reverse Email Lookup</h1>
 
             <p>
               Pellentesque habitant morbi tristique senectus et netus et
@@ -97,26 +93,21 @@
           </div>
           <!-- Item List-->
           <div class="container">
-            <div class="row row-cols-2 ">
+            <div class="row row-cols-2">
               <!--Horizontal Card Item List-->
               <div class="col list-item">
-                <div class="card mb-3 " style="max-width: 540px; border: none; background: transparent;">
+                <div class="card mb-3" style="max-width: 540px">
                   <div class="row g-0">
-                    <div class="col-md-4 cirle-container"">
-                      <div class="list-item-number">
-                        <h1 class="highlight-text">1</h1>
-                      </div>
-                      
+                    <div class="col-md-4 list-item-number">
+                      <h1 class="highlight-text">1</h1>
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="blue-text">Lorem Ipsum</h5>
-                        <p class="card-text" >
+                        <h5 class="card-title">Lorem Ipsum</h5>
+                        <p class="card-text">
                           Pellentesque habitant morbi tristique senectus et
                           netus et malesuada fames ac turpis egestas. Vestibulum
-                          tortor quam, feugiat vitae, ultricies eget. Donec eu
-                          libero sit amet quam egestas semper. Aenean ultricies
-                          mi vitae est. Mauris placerat eleifend leo.
+                          tortor quam, feugiat vitae, ultricies eget. 
                         </p>
                       </div>
                     </div>
@@ -125,17 +116,14 @@
               </div>
               <!--Horizontal Card Item List-->
               <div class="col list-item">
-                <div class="card mb-3" style="max-width: 540px; border: none; background: transparent;">
+                <div class="card mb-3" style="max-width: 540px">
                   <div class="row g-0">
-                    <div class="col-md-4">
-                      <div class="list-item-number">
-                        <h1 class="highlight-text">2</h1>
-                      </div>
-                      
+                    <div class="col-md-4 list-item-number">
+                      <h1 class="highlight-text">2</h1>
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="blue-text">Lorem Ipsum</h5>
+                        <h5 class="card-title">Lorem Ipsum</h5>
                         <p class="card-text">
                           Pellentesque habitant morbi tristique senectus et
                           netus et malesuada fames ac turpis egestas. Vestibulum
@@ -150,17 +138,14 @@
               </div>
               <!--Horizontal Card Item List-->
               <div class="col list-item">
-                <div class="card mb-3" style="max-width: 540px; border: none; background: transparent;">
+                <div class="card mb-3" style="max-width: 540px">
                   <div class="row g-0">
-                    <div class="col-md-4">
-                      <div class="list-item-number">
-                        <h1 class="highlight-text">3</h1>
-                      </div>
-                      
+                    <div class="col-md-4 list-item-number">
+                      <h1 class="highlight-text">3</h1>
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="blue-text">Lorem Ipsum</h5>
+                        <h5 class="card-title">Lorem Ipsum</h5>
                         <p class="card-text">
                           Pellentesque habitant morbi tristique senectus et
                           netus et malesuada fames ac turpis egestas. Vestibulum
@@ -175,17 +160,14 @@
               </div>
               <!--Horizontal Card Item List-->
               <div class="col list-item">
-                <div class="card mb-3" style="max-width: 540px; border: none; background: transparent;">
+                <div class="card mb-3" style="max-width: 540px">
                   <div class="row g-0">
-                    <div class="col-md-4">
-                      <div class="list-item-number">
-                        <h1 class="highlight-text">4</h1>
-                      </div>
-                      
+                    <div class="col-md-4 list-item-number">
+                      <h1 class="highlight-text">4</h1>
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="blue-text">Lorem Ipsum</h5>
+                        <h5 class="card-title">Lorem Ipsum</h5>
                         <p class="card-text">
                           Pellentesque habitant morbi tristique senectus et
                           netus et malesuada fames ac turpis egestas. Vestibulum
