@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="..\Scripts\search.js"></script>
     <link rel="stylesheet" type="text/css" href="..\Styles\styles.css" />
     <link
@@ -58,92 +60,86 @@
             <h1 id="resultsCount" class="blue-text">Results</h1>
             <p id="responseText">Look at the results</p>
           </div>
-          <div class="results-details container-fluid ">
-			<div class="row" >
-				<div class="col-md-12 " style="margin-inline:5%; padding-inline:5%;" >
-					<div class="card col-md-12 " style=" border-radius: 5px; background: transparent; padding: 2%;">
-						<div class="row g-1" style="padding: 0%;">
-							<div class="col-md-2 circle-container">
-								<div class="list-item-number">
-									<p>Profile</p>
-								</div>
-							</div>
-							<div class="col-md-10">
-								<h3 class="blue-text" >Name</h3>
-								<div class="card-body">
-									<p>ellentesque habitant morbi tristique senectus et
-										netus et malesuada fames ac turpis egestas. Vestibulum
-										tortor quam, feugiat vitae, ultricies eget.</p>
-								</div>
-
-							</div>
-						</div>
-						<div class="row g-0">
-							<div class="col-md-2">
-								
-							</div>
-							<div class="col-md-5">
-								
-								<div class="card-body">
-									<h3 class="blue-text" >Address</h3>
-									<p>ellentesque habitant morbi tristique senectus et
-										netus et malesuada fames ac turpis egestas. Vestibulum
-										tortor quam, feugiat vitae, ultricies eget.</p>
-								</div>
-
-							</div>
-							<div class="col-md-5">
-								<div class="card-body">
-									<h3 class="blue-text" >Phone Numbers</h3>
-									<ul>
-										<li>(555) 555-555</li>
-										<li>(555) 555-555</li>
-										<li>(555) 555-555</li>
-										
-									</ul>
-								</div>
-
-							</div>
-						</div>
-						<div class="row g-3">
-							<div class="col-md-2">
-								
-							</div>
-							<div class="col-md-5">
-								<div class="card-body">
-									<h3 class="blue-text" >Email</h3>
-									<input  type="text" name="email" id="emailInput" >
-								</div>
-
-							</div>
-							<div class="col-md-5">
-								<div class="card-body">
-									<h3 class="blue-text" >Relatives</h3>
-									<ul>
-										<li>Relative</li>
-										<li>Relative</li>
-									</ul>
-								</div>
-
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<div class="row padding">
-
-			</div>
-
-
-
-		  </div>
+          <div class="results-details container-fluid">
+            <div class="row">
+              <div
+                class="col-md-12"
+                style="margin-inline: 5%; padding-inline: 5%"
+              >
+                <div
+                  class="card col-md-12"
+                  style="
+                    border-radius: 5px;
+                    background: transparent;
+                    padding: 2%;
+                  "
+                >
+                  <div class="row g-1" style="padding: 0%">
+                    <div class="col-md-2 circle-container">
+                      <div class="list-item-number">
+                        <p>Profile</p>
+                      </div>
+                    </div>
+                    <div class="col-md-10">
+                      <h3 class="blue-text">Name</h3>
+                      <div class="card-body">
+                        <input 
+                          name="descriptionCard"
+                          id="userDescription"
+                          cols="80"
+                          rows="2"
+                        ></input>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-0">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                      <div class="card-body">
+                        <h3 class="blue-text">Address</h3>
+                        <textarea
+                          name="address"
+                          id="addressCard"
+                          cols="30"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="card-body">
+                        <h3 class="blue-text">Phone Numbers</h3>
+                        <ul>
+                          <li>(555) 555-555</li>
+                          <li>(555) 555-555</li>
+                          <li>(555) 555-555</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                      <div class="card-body">
+                        <h3 class="blue-text">Email</h3>
+                        <input type="text" name="email" id="emailInput" />
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="card-body">
+                        <h3 class="blue-text">Relatives</h3>
+                        <ul>
+                          <li>Relative</li>
+                          <li>Relative</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row padding"></div>
+          </div>
         </div>
-
-
-
-
-
 
         <!-- Main Content Search -->
         <div class="main-search jumbotron content-wrapper" id="search-section">
