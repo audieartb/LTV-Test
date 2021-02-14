@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $('#ajax-loading-front').hide()
 
   const URL = "https://ltv-data-api.herokuapp.com/api/v1/records.json";
 
@@ -12,6 +13,10 @@ $(document).ready(function () {
     var email = document.getElementById("searchInput").value;
     
     //submits request to API
+    $('#ajax-loading-front').show()
+    $(document).bind('scroll',function () { 
+        window.scrollTo(0,0); 
+    });
     
     $.ajax({
       url: url,
@@ -22,8 +27,9 @@ $(document).ready(function () {
       success: function (res) {
         sessionStorage.clear();
         sessionStorage.setItem("userData", JSON.stringify(res));
-
+        
         renderResults();
+        
       },
       error: function (err) {
         console.log(err);
@@ -43,6 +49,8 @@ $(document).ready(function () {
     } else {
       window.location.assign("src/Templates/results.html");
     }
+
+    
   }
 
 });

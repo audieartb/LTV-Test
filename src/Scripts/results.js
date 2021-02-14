@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    $('#ajax-loading-front').hide()
     $('html, body').animate({ scrollTop: 0 }, 'fast');
  
     var userData = JSON.parse(sessionStorage.getItem("userData"));
