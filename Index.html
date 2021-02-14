@@ -11,11 +11,13 @@
 	<link rel="stylesheet" type="text/css" href="src\Styles\styles.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
-	<title>Email LookUp</title>
+	<title id="title">Email Lookup</title>
 </head>
 
-<body>
-	<div class="parent">
+
+<body id="index-body">
+
+	<div class="parent" >
 		<header class="navbar-bg-color">
 			<!-- Navigation Bar -->
 			<nav class="navbar navbar-expan-md content-wrapper sticky-top">
@@ -40,9 +42,19 @@
        -->
 		<!-- Main Content -->
 		<main>
+
+			<!-- Loading Screen -->
+			<div id="ajax-loading-front"  class="justify-content-center">
+				
+				<img src="Assets/loading_spinner.gif" alt="spinnergif" id="spinner-gif" >
+				<h3>Please wait a moment...</h3>
+			</div>
 			<!-- Main Content Search -->
+		
+			
+			
 			<div class="main-search jumbotron content-wrapper" id="search-section">
-				<h1 class="text-center display-2">Search Any Email Address</h1>
+				<h1 id="testing" class="text-center display-2">Search Any Email Address</h1>
 				<h3 class="text-center">
 					<b class="highlight-text">Start Here</b> - Look up the owner's name, photos and online profiles.
 					See what you find!
@@ -53,7 +65,7 @@
 						<div style="margin-bottom: 5px;"
 							class="col-xs-12 col-sm-9 col-md-10 col-lg-10 col-xl-10 input-group-lg">
 
-							<input type="email" class="form-control " id="search-input" placeholder="Email" />
+							<input type="email" class="form-control" name="email" id="searchInput" placeholder="Email" />
 						</div>
 						<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 col-xl-2 input-group-lg">
 							<button type="submit" class="mb-3 btn-go ">

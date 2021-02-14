@@ -7,6 +7,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="..\Scripts\search.js"></script>
+    <script type="text/javascript" src="..\Scripts\results.js"></script>
     <link rel="stylesheet" type="text/css" href="..\Styles\styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
@@ -14,7 +15,7 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <title>Email LookUp</title>
+    <title id="title">Results Lookup</title>
   </head>
 
   <body>
@@ -57,38 +58,38 @@
       <main>
         <div class="results-content content-wrapper">
           <div class="results-count text-center">
-            <h1 id="resultsCount" class="blue-text">Results</h1>
-            <p id="responseText">Look at the results</p>
+            <h1 id="results_count" class="blue-text"></h1>
+            <p id="response_text"></p>
           </div>
-          <div class="results-details container-fluid">
+          <div class="results-details container-fluid" id="resultTag">
             <div class="row">
               <div
                 class="col-md-12"
-                style="margin-inline: 5%; padding-inline: 5%"
+                style="
+                  margin-inline: 5%;
+                  padding-inline: 5%;
+                  padding-bottom: 0%;
+                "
               >
-                <div
-                  class="card col-md-12"
-                  style="
-                    border-radius: 5px;
-                    background: transparent;
-                    padding: 2%;
-                  "
-                >
+                <div class="card col-md-12  border-top-0 result-tag">
                   <div class="row g-1" style="padding: 0%">
                     <div class="col-md-2 circle-container">
                       <div class="list-item-number">
-                        <p>Profile</p>
+                        <img
+                          src="../../Assets/PNGs/icn_person@2x.png"
+                          alt="person-icon"
+                          style="max-width: inherit; max-height: inherit"
+                        />
                       </div>
                     </div>
-                    <div class="col-md-10">
-                      <h3 class="blue-text">Name</h3>
-                      <div class="card-body">
-                        <input 
+                    <div class="col-md-10 col-sm-12" >
+                      <h4 id="user_name" class="blue-text">Name</h4>
+                      <div class="card-body " id="user_description">
+                        <p
+                          id="user_description"
                           name="descriptionCard"
                           id="userDescription"
-                          cols="80"
-                          rows="2"
-                        ></input>
+                        ></p>
                       </div>
                     </div>
                   </div>
@@ -96,23 +97,18 @@
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
                       <div class="card-body">
-                        <h3 class="blue-text">Address</h3>
-                        <textarea
+                        <h4 class="blue-text">Address</h4>
+                        <p
                           name="address"
-                          id="addressCard"
-                          cols="30"
-                          rows="3"
-                        ></textarea>
+                          id="user_address"
+                        
+                        ></p>
                       </div>
                     </div>
                     <div class="col-md-5">
                       <div class="card-body">
-                        <h3 class="blue-text">Phone Numbers</h3>
-                        <ul>
-                          <li>(555) 555-555</li>
-                          <li>(555) 555-555</li>
-                          <li>(555) 555-555</li>
-                        </ul>
+                        <h4 class="blue-text">Phone Numbers</h4>
+                        <ul id="phone_numbers"></ul>
                       </div>
                     </div>
                   </div>
@@ -120,17 +116,14 @@
                     <div class="col-md-2"></div>
                     <div class="col-md-5">
                       <div class="card-body">
-                        <h3 class="blue-text">Email</h3>
-                        <input type="text" name="email" id="emailInput" />
+                        <h4 class="blue-text">Email</h4>
+                        <p type="text" name="email" id="user_email" />
                       </div>
                     </div>
                     <div class="col-md-5">
                       <div class="card-body">
-                        <h3 class="blue-text">Relatives</h3>
-                        <ul>
-                          <li>Relative</li>
-                          <li>Relative</li>
-                        </ul>
+                        <h4 class="blue-text">Relatives</h4>
+                        <ul id="relatives"></ul>
                       </div>
                     </div>
                   </div>
@@ -142,12 +135,18 @@
         </div>
 
         <!-- Main Content Search -->
+
         <div class="main-search jumbotron content-wrapper" id="search-section">
-          <h1 class="text-center display-2">Can't Find The RIght Person?</h1>
+          <h1 class="text-center display-2">Can't Find The Right Person?</h1>
           <h3 class="text-center">
             <b class="highlight-text">Try Again</b> - Make a new search
           </h3>
-          <form class="align-items-center" style="margin: 10px 5px">
+          <form
+            class="align-items-center ajax"
+            id="emailForm"
+            method="GET"
+            style="margin: 10px 5px"
+          >
             <div class="row">
               <div
                 style="margin-bottom: 5px"
@@ -156,7 +155,8 @@
                 <input
                   type="email"
                   class="form-control"
-                  id="search-input"
+                  name="email"
+                  id="searchInput"
                   placeholder="Email"
                 />
               </div>
