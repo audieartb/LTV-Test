@@ -17,7 +17,7 @@ $(document).ready(function () {
     $(document).bind('scroll',function () { 
         window.scrollTo(0,0); 
     });
-    
+
     $.ajax({
       url: url,
       type: type,
@@ -43,8 +43,9 @@ $(document).ready(function () {
 
   function renderResults() {
 
-    console.log(window.location.pathname)
-    if (window.location.pathname != '/') {
+    pathname = window.location.pathname;
+    
+    if (pathname != '/index.html' || pathname == '/') {
       window.location.reload(false);
     } else {
       window.location.assign("src/Templates/results.html");
