@@ -30,9 +30,6 @@
     height: 100vw;
     overflow: hidden;
     visibility: show;
-/*     
-    margin-top: 50vh;
-    transform: translateY(-50%); */
     
   }
 
@@ -76,6 +73,7 @@
   background-color: #F2DA56;
 }
 
+
 /* Index Item List Styles */
 
 .main-content-lower {
@@ -90,36 +88,47 @@
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
+/* card style */
 .list-item-number {
   border-radius: 50%;
 
-  min-width: 75px;
-  min-height: 75px;
-
-  max-width: 100px;
-  max-height: 125px;
+  width: 100px;
+  height: 90px;
 
   background-color: #004a80;
   place-items: center;
   display: grid;
   font-size: larger;
   
+}
+
+#cards-layout h1{
+  font-weight: 600;
+  font-size: 2rem;
   
 }
-.list-item-text {
-  position: relative;
+
+.title{
+  text-align: center;
+  padding: 1rem 0rem;
+}
+
+.title p{
+  font-size: 1rem;
 }
 
 .card-style{
-    max-width: 540px;
-    border: none;
-    background: transparent;
+  margin: 1rem;
+  border: none;
+  font-size: 1rem;
 }
 
-.card-text{
-    font-size: 2vm;
-    
+.card-style h5{
+  font-weight: 600;
+  font-size: 1.5rem;
+
 }
+
 
 /* Results */
 
@@ -137,6 +146,14 @@
   padding: 2% 0% 0% 2%;
   
 }
+
+
+.footer{
+  box-sizing: content-box;
+  display: grid;
+  place-items: center;
+}
+
 
 @media(max-width:800px){
     .content-wrapper{
