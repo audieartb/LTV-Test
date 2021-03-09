@@ -1,4 +1,4 @@
-# LTV-Test
+# Search by Email
 
 This page displays a one field form for a search using an email, the redirecting to another page which will show the results if there are any.
 The search is performed by doing a GET request using the email as parameter, this will return all the data and the it is stored on SessionStorage. The it 
